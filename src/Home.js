@@ -77,7 +77,7 @@ const Home = () => {
     },
     {
       title: `All Movies (${movies.length})`,
-      items: movies,
+      items: [...movies].sort((a, b) => a.title.localeCompare(b.title)),
       type: "movie",
     },
   ];
@@ -96,7 +96,7 @@ const Home = () => {
             <span className="marquee1">
               Welcome to StreamSphere! Latest Releases: Waltair Veerayya and Squid Game Season 2...
             </span>
-            &nbsp;&nbsp;&nbsp; For copyright concerns, please email us at:{" "}
+            &nbsp;&nbsp;&nbsp; For copyright concerns, please email us at: {" "}
             <a
               href="mailto:moviezvibe01@gmail.com"
               style={{ color: "red", textDecoration: "none" }}
@@ -120,7 +120,7 @@ const Home = () => {
             </button>
             <img src={imageSrc} alt="Copyright Notice" className="popup-image" />
             <p style={{ color: "red" }}>
-              For copyright concerns, please email us at:{" "}
+              For copyright concerns, please email us at: {" "}
               <a
                 href="mailto:moviezvibe01@gmail.com"
                 style={{ color: "red", textDecoration: "underline" }}
